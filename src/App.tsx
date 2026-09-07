@@ -27,7 +27,7 @@ function App() {
   const [orden, setOrden] = useState<OrdenTipo>(null);
 
   useEffect(() => {
-    fetch("https://fuel-dashboard-api.onrender.com/stations")
+    fetch(`${import.meta.env.VITE_API_URL}/stations`)
       .then((res) => {
         if (!res.ok) throw new Error("Error al cargar los datos");
         return res.json();
