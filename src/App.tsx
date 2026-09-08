@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { Navigation } from "lucide-react";
+import { getStations } from "./services/api";
 import type { GasStation } from "./types";
 import { LocationScreen } from "./LocationScreen";
 import { calcularDistanciaKm, categoriaDistancia } from "./utils";
