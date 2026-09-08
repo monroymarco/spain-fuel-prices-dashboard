@@ -1,4 +1,3 @@
-import { getStations } from "./services/api";
 import type { GasStation } from "../types";
 
 type StationsResponse = {
@@ -48,5 +47,5 @@ export async function getStations({
     throw new Error("Error al cargar las gasolineras");
   }
 
-  return response.json();
+  return await response.json();
 }
